@@ -1,10 +1,19 @@
-namespace Bastion
-{
-	__declspec(dllimport) void Print();
-}
+#include <Bastion.h>
 
-
-void main()
+class SandboxGame : public Bastion::Game
 {
-	Bastion::Print();
+public:
+	SandboxGame()
+	{
+		
+	}
+	~SandboxGame()
+	{
+		
+	}
+};
+
+Bastion::Game* Bastion::CreateGame()
+{
+	return new SandboxGame();
 }
