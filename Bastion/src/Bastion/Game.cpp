@@ -1,4 +1,6 @@
 #include "Game.h"
+#include "Logger.h"
+#include <spdlog/spdlog.h>
 
 namespace Bastion
 {
@@ -14,10 +16,21 @@ namespace Bastion
 
 	void Game::Run()
 	{
+		if(!Init())
+		{
+			return;
+		}
 		while (true)
 		{
 			
 		}
+	}
+
+	bool Game::Init()
+	{
+		if (!Logger::Init()) return false;
+
+		return true;
 	}
 }
 

@@ -12,6 +12,9 @@ namespace Bastion
 		virtual ~Game();
 
 		void Run();
+
+	private:
+		bool Init();
 	};
 
 	Game* CreateGame();
