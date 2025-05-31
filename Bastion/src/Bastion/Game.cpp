@@ -24,7 +24,7 @@ namespace Bastion
 	{
 		if (!Logger::Init()) return false;
 		BS_CORE_INFO("Initialized Core Console!");
-		BS_INFO("Initialized Core Console!");
+		BS_INFO("Initialized Client Console!");
 		return true;
 	}
 }
