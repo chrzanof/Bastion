@@ -4,15 +4,9 @@
 
 namespace Bastion
 {
-	Game::Game()
-	{
+	Game::Game() = default;
 
-	}
-
-	Game::~Game()
-	{
-
-	}
+	Game::~Game() = default;
 
 	void Game::Run()
 	{
@@ -29,7 +23,8 @@ namespace Bastion
 	bool Game::Init()
 	{
 		if (!Logger::Init()) return false;
-
+		BS_CORE_INFO("Initialized Core Console!");
+		BS_INFO("Initialized Core Console!");
 		return true;
 	}
 }
